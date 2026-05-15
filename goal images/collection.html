@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#000;
+  min-height:100vh;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   TOP BAR
+   ========================= */
+
+.top-bar{
+  width:100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+
+  gap:20px;
+
+  padding:25px 25px;
+}
+
+/* =========================
+   MARQUEE
+   ========================= */
+
+.custom-marquee{
+  width:1100px;   /* NOT full width */
+  height:38px;
+
+  overflow:hidden;
+
+  border:1px solid #fff;
+
+  display:flex;
+  align-items:center;
+
+  position:relative;
+}
+
+/* Moving text */
+.marquee-track{
+  display:flex;
+  width:max-content;
+
+  animation: marqueeMove 15s linear infinite;
+}
+
+.marquee-track span{
+  color:#fff;
+
+  white-space:nowrap;
+
+  font-size:14px;
+  letter-spacing:2px;
+
+  padding-right:60px;
+}
+
+/* Animation */
+@keyframes marqueeMove{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+/* =========================
+   MENU BUTTON
+   ========================= */
+
+.menu-btn{
+  background:none;
+  border:none;
+
+  color:#fff;
+
+  font-size:32px;
+  cursor:pointer;
+}
+
+.marquee-container {
+    overflow: hidden; /* Hide the overflow */
+    white-space: nowrap; /* Keep text on one line */
+    background: #f8f9fa; /* Optional: Bootstrap light bg */
+    padding: 10px 0;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite; /* Adjust speed here */
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* Reduce offcanvas width */
+.offcanvas{
+  width: 260px !important; /* adjust size here */
+  background: #fff;
+}
+
+/* Make all menu text black */
+.offcanvas-title,
+.nav-link{
+  color: #000 !important;
+}
+
+/* Optional hover effect */
+.nav-link:hover{
+  color: #444 !important;
+}
+
+/* Make close button black too */
+.btn-close{
+  filter: none;
+}
+
+
+
+
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+
+  }
+
+
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body{
+  background: #000000;
+  font-family: Inconsolata, sans-serif;
+}
+
+/* SECTION */
+.category-section{
+  width: 100%;
+  padding: 40px 20px;
+}
+
+/* GRID */
+.category-grid{
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+.category-card{
+  position: relative;
+
+  height: 420px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  transition: transform .3s ease;
+}
+
+/* HOVER */
+.category-card:hover{
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.category-card img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* DARK OVERLAY */
+.category-card::after{
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.1)
+  );
+
+  z-index: 1;
+}
+
+/* CONTENT */
+.category-content{
+  position: absolute;
+
+  left: 22px;
+  right: 22px;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #fff;
+
+  z-index: 2;
+}
+
+/* TITLE */
+.category-content h3{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ARROW */
+.category-content span{
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .category-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .category-card{
+    height: 280px;
+  }
+
+  .category-content h3{
+    font-size: 16px;
+  }
+
+  .category-content span{
+    font-size: 22px;
+  }
+
+}
+</style>
+<body>
+
+
+
+<nav>
+ 
+<!-- TOP BAR -->
+<div class="top-bar">
+
+  <!-- MARQUEE -->
+      <div class="custom-marquee">
+     <div class="marquee-track">
+
+    <span>NEW COLLECTION AVAILABLE • FREE SHIPPING • ATO-YAF STREETWEAR •</span>
+    <span>NEW COLLECTION AVAILABLE • FREE SHIPPING • ATO-YAF STREETWEAR •</span>
+    <span>NEW COLLECTION AVAILABLE • FREE SHIPPING • ATO-YAF STREETWEAR •</span>
+    <span>NEW COLLECTION AVAILABLE • FREE SHIPPING • ATO-YAF STREETWEAR •</span>
+
+  </div>
+  </div>
+
+
+  <nav class="navbar ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Ato-yaf</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-2">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+          <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+          
+        
+      </div>
+    </div>
+  </div>
+  
+</nav>
+</nav>
+
+
+
+    <section class="category-section">
+
+  <div class="category-grid">
+
+    <!-- CARD 1 -->
+    <a href="#" class="category-card">
+
+      <img src="goal images/lag1.jpeg" alt="">
+
+      <div class="category-content">
+        <h3>Backpacks</h3>
+        <span>›</span>
+      </div>
+
+    </a>
+
+    <!-- CARD 2 -->
+    <a href="#" class="category-card">
+
+      <img src="goal images/lag2.jpg" alt="">
+
+      <div class="category-content">
+        <h3>Duffel bags</h3>
+        <span>›</span>
+      </div>
+
+    </a>
+
+    <!-- CARD 3 -->
+    <a href="#" class="category-card dark-card">
+
+      <img src="goal images/lag3.jpg" alt="">
+
+      <div class="category-content">
+        <h3>Travel stoves</h3>
+        <span>›</span>
+      </div>
+
+    </a>
+
+     <a href="#" class="category-card dark-card">
+
+      <img src="goal images/lag4.jpg" alt="">
+
+      <div class="category-content">
+        <h3>Travel stoves</h3>
+        <span>›</span>
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+
+</body>
+</html>

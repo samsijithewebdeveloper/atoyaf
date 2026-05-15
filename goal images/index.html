@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinDog</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  
+<nav>
+ 
+<!-- TOP BAR -->
+<div class="top-bar">
+
+  <!-- MARQUEE -->
+      <div class="custom-marquee">
+     <div class="marquee-track">
+
+    <span>NEW COLLECTION AVAILABLE • FREE SHIPPING • ATO-YAF STREETWEAR •</span>
+    <span>NEW COLLECTION AVAILABLE • FREE SHIPPING • ATO-YAF STREETWEAR •</span>
+    <span>NEW COLLECTION AVAILABLE • FREE SHIPPING • ATO-YAF STREETWEAR •</span>
+    <span>NEW COLLECTION AVAILABLE • FREE SHIPPING • ATO-YAF STREETWEAR •</span>
+
+  </div>
+  </div>
+
+
+  <nav class="navbar ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Ato-yaf</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-2">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./collection.html">Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+          <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+          
+        
+      </div>
+    </div>
+  </div>
+  
+</nav>
+</nav>
+
+
+
+<section 
+  class="latest-arrivals"
+  style="background-image: url('./goal\ images/Max_a_it_seems_there_is_de\ \(1\).png');"
+>
+  
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h2>LATEST ARRIVALS</h2>
+
+    <div class="buttons">
+      <a href="" class="btn">SHOP ALL</a>
+      <a href="#" class="btn">VIEW LOOKBOOK</a>
+    </div>
+  </div>
+  
+
+</section>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Featured Products</title>
+
+  <style>
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#000;
+  min-height:100vh;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   TOP BAR
+   ========================= */
+
+.top-bar{
+  width:100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+
+  gap:20px;
+
+  padding:25px 25px;
+}
+
+/* =========================
+   MARQUEE
+   ========================= */
+
+.custom-marquee{
+  width:1100px;   /* NOT full width */
+  height:38px;
+
+  overflow:hidden;
+
+  border:1px solid #fff;
+
+  display:flex;
+  align-items:center;
+
+  position:relative;
+}
+
+/* Moving text */
+.marquee-track{
+  display:flex;
+  width:max-content;
+
+  animation: marqueeMove 15s linear infinite;
+}
+
+.marquee-track span{
+  color:#fff;
+
+  white-space:nowrap;
+
+  font-size:14px;
+  letter-spacing:2px;
+
+  padding-right:60px;
+}
+
+/* Animation */
+@keyframes marqueeMove{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+/* =========================
+   MENU BUTTON
+   ========================= */
+
+.menu-btn{
+  background:none;
+  border:none;
+
+  color:#fff;
+
+  font-size:32px;
+  cursor:pointer;
+}
+
+.marquee-container {
+    overflow: hidden; /* Hide the overflow */
+    white-space: nowrap; /* Keep text on one line */
+    background: #f8f9fa; /* Optional: Bootstrap light bg */
+    padding: 10px 0;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite; /* Adjust speed here */
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* Reduce offcanvas width */
+.offcanvas{
+  width: 260px !important; /* adjust size here */
+  background: #fff;
+}
+
+/* Make all menu text black */
+.offcanvas-title,
+.nav-link{
+  color: #000 !important;
+}
+
+/* Optional hover effect */
+.nav-link:hover{
+  color: #444 !important;
+}
+
+/* Make close button black too */
+.btn-close{
+  filter: none;
+}
+
+
+
+
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+
+  }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      font-family: Inconsolata;
+      color:#fff;
+    }
+
+    .featured-section{
+      width:100%;
+      padding:40px 50px 60px;
+      background:#050505;
+    }
+
+    .section-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:50px;
+    }
+
+    .section-title{
+      font-size:14px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      font-weight:600;
+    }
+
+    .slider-nav{
+      display:flex;
+     gap: 14px;
+      font-size:24px;
+      color:#bdbdbd;
+      cursor:pointer;
+      user-select:none;
+    }
+
+    .slider-nav span:hover{
+      color:#fff;
+    }
+
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:40px;
+      align-items:start;
+    }
+
+    .product-card{
+      text-align:center;
+    }
+
+    .product-image{
+      width:100%;
+      height:320px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:28px;
+      overflow:hidden;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .product-image img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:contain;
+      transition:transform 0.35s ease;
+    }
+
+    .product-card:hover img{
+      transform:scale(1.04);
+    }
+
+    .product-title{
+      font-size:18px;
+      line-height:1.4;
+      margin-bottom:10px;
+      font-weight:500;
+    }
+
+    .product-price{
+      font-size:18px;
+      color:#f5f5f5;
+      font-weight:400;
+    }
+
+    @media (max-width:1300px){
+      .products-grid{
+        grid-template-columns:repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width:650px){
+      .featured-section{
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+      }
+
+      .products-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+      }
+
+      .product-image{
+        height:260px;
+      }
+
+      .product-title,
+      .product-price{
+        font-size:16px;
+      }
+    }
+
+    /* =========================
+   MOBILE HORIZONTAL SLIDER
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .featured-section{
+    padding: 30px 0 50px 20px;
+    overflow: hidden;
+  }
+
+  .products-grid{
+    display: flex;
+    gap: 5px;
+    height: 100%;
+
+    /* horizontal scroll */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+  }
+
+  .products-grid::-webkit-scrollbar{
+    display: none;
+  }
+
+  .product-card{
+    flex: 0 0 75%;
+    scroll-snap-align: start;
+
+    text-align: center;
+  }
+
+  .product-image{
+    height: 260px;
+    margin-bottom: 10px;
+  }
+
+  .product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product-title{
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  .product-price{
+    font-size: 14px;
+  }
+
+  /* optional: hide arrows on mobile */
+  .slider-nav{
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <section class="featured-section">
+
+    <div class="section-top">
+      <h2 class="section-title">Featured</h2>
+
+      <div class="slider-nav">
+        <span>&lt;</span>
+        <span>&gt;</span>
+      </div>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="./goal images/imgi2.png" alt="Football Lightweight Poplin Jacket">
+        </div>
+
+        <h3 class="product-title">
+          Football Lightweight Poplin Jacket
+        </h3>
+
+        <p class="product-price">€103,95</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="./goal images/imgi_4_image_9e54cda7-d43f-4bd9-aa65-ec3207e9e5dd_800x800.png" alt="Lightercap Hood Zip Hooded T-Shirt">
+        </div>
+
+        <h3 class="product-title">
+          Lightercap Hood Zip Hooded T-Shirt
+        </h3>
+
+        <p class="product-price">€103,95</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="./goal images/imgi_6_product1._800x800.png" alt="Multi-Buckle Tactical Vest">
+        </div>
+
+        <h3 class="product-title">
+          Multi-Buckle Tactical Vest
+        </h3>
+
+        <p class="product-price">€103,95</p>
+      </div>
+       <div class="product-card">
+        <div class="product-image">
+          <img src="./goal images/imgi_5_image_12e4704e-649b-4159-bcfe-78171f3a7d4d_800x800.png" alt="Multi-Buckle Tactical Vest">
+        </div>
+
+        <h3 class="product-title">
+          Multi-Buckle Tactical Vest
+        </h3>
+
+        <p class="product-price">€103,95</p>
+      </div>
+  
+
+  </section>
+
+      
+<section class="floating-gallery-wrapper">
+
+  <div class="floating-gallery">
+
+    <img class="gallery-bg" src="./goal images/Untitled design.gif " alt="">
+
+    <a href="#" class="floating-item item1">
+      <img src="./goal images/img15.png" alt="">
+    </a>
+
+    <a href="#" class="floating-item item2">
+      <img src="./goal images/img16.png" alt="">
+    </a>
+
+    <a href="#" class="floating-item item3">
+      <img src="./goal images/Untitled.png" alt="">
+    </a>
+
+    <!-- NEW ITEMS -->
+    
+
+    <a href="#" class="floating-item item5">
+      <img src="./goal images/img19.png" alt="">
+    </a>
+
+    <a href="#" class="floating-item item6">
+      <img src="./goal images/image (3).png" alt="">
+    </a>
+
+    <a href="#" class="floating-item item7">
+      <img src="./images/Untitled.png" alt="">
+    </a>
+
+    <a href="#" class="floating-item item7">
+      <img src="./goal images/image (3).png" alt="">
+    </a>
+
+  </div>
+
+</section>
+
+  <footer>
+    <div class="footer-container">
+
+      <!-- About Us -->
+      <div class="footer-column">
+        <h2>About Us</h2>
+        <p>
+          We create modern and user-friendly digital experiences
+          for businesses and individuals around the world.
+        </p>
+      </div>
+
+      <!-- Menu Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+
+        <input type="checkbox" id="menu-checkbox">
+
+        <label for="menu-checkbox" class="menu-toggle">
+          ☰ Menu
+        </label>
+
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="footer-column">
+        <h3>Sign Up</h3>
+
+        <form class="signup-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script type="module" src="./script.js"></script>
+</body>
+</html>
+
+</body>
